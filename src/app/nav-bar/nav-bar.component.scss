@@ -1,0 +1,14 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  max-width: 360px;
+  padding: 5px;
+  color: black;
+  font-size: 18px;
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}

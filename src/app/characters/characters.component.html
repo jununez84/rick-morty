@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="thumbnail" *ngFor="let character of characters">
+    <img
+      [src]="character.image"
+      alt=""
+      [title]="character.name"
+      (click)="onClick()"
+    />
+  </div>
+</div>
