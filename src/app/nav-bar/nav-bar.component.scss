@@ -1,14 +1,24 @@
 .nav-bar {
   display: flex;
-  align-items: center;
   background-color: white;
   max-width: 360px;
-  padding: 5px;
   color: black;
-  font-size: 18px;
   img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    border-left: 1px solid #ccc;
+    text-align: left;
+    .main {
+      font-size: 18px;
+    }
+    .sub-title {
+      font-size: 12px;
+    }
   }
 }

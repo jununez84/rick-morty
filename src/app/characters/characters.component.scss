@@ -1,12 +1,31 @@
+$character-status: (
+  "Alive": rgb(85, 204, 68),
+  "Dead": rgb(214, 61, 46),
+  "unknown": gray,
+);
+
+@mixin status($color) {
+  display: block;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $color;
+  z-index: 1;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 25px 10px;
   justify-content: center;
   max-width: 360px;
 }
 
 .thumbnail {
+  position: relative;
   width: 65px;
   height: 65px;
   padding: 8px;
@@ -15,5 +34,10 @@
     height: 65px;
     border-radius: 15px;
     cursor: pointer;
+  }
+  @each $status, $value in $character-status {
+    .status-#{$status} {
+      @include status($value);
+    }
   }
 }
